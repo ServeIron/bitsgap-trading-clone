@@ -23,16 +23,16 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2 ">
-
+            sol kısım
             </div>
             <div class="col-md-8 ">
-
+                <div class="row">
                 <div class="col-md-12 tradingview-widget-container">
                     <div class="row" style="height: 500px;">
                         <script>
                             new TradingView.widget({
                                 "autosize": true,
-                                "symbol": "BINANCE:BTCTRY",
+                                "symbol": "BINANCE:BTCUSD",
                                 "timezone": "Europe/Istanbul",
                                 "theme": "Dark",
                                 "style": "1",
@@ -47,16 +47,47 @@
                                 "container_id": "tradingview_e3174"
                             });
                         </script>
-
                     </div>
                 </div>
-                <div class="transaction-bottom-menu bg-dark">
-                    <div>Açık Emirler</div>
+              
+                <div class="col-md-8 transaction-bottom-menu bg-bright font-dark">
+                    <div class="transaction-bottom-menu-active">Açık Emirler</div>
                     <div>Pozisyonlar</div>
                     <div>Emir geçmişi</div>
-                    <div style="justify-content: flex-end;">Emir Tipi</div>
+                   
                 </div>
-
+                
+                <div class="col-md-4 transaction-bottom-menu-two bg-bright font-dark">
+                    <div>Emir Tİpi <i class="fas fa-angle-down"></i> </div>      
+                    <ul>
+                        <li>Tüm emirler</li>
+                        <li>Satış emirler</li>
+                        <li>Alım emirler</li>
+                    </ul>            
+                </div>
+                <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: block;">
+                    <div class="bottom-warning font-dark">
+                    <img src="images/box.png" alt="">
+                    <br>
+                        Açık Emirleriniz Bulunmuyor
+                    </div>
+                </div>
+                <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: none;">
+                    <div class="bottom-warning font-dark">
+                    <img src="images/box.png" alt="">
+                    <br>
+                        Pozisyon Bulunmuyor
+                    </div>
+                </div>
+                <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: none;">
+                    <div class="bottom-warning font-dark">
+                    <img src="images/box.png" alt="">
+                    <br>
+                        Emirleriniz Bulunmuyor
+                    </div>
+                </div>
+            </div>
+          
             </div>
             <div class="col-md-2">
                 sağ kısım

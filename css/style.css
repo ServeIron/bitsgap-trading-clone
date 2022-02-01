@@ -3,8 +3,8 @@ body {
 }
 
 * {
-    font-family: SFProDisplay, Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-weight: 500;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-weight: 400;
 }
 
 .bg-bright {
@@ -17,7 +17,7 @@ body {
 
 .font-bright {
     color: #fcfcfc;
-    ;
+    
 }
 
 .font-dark {
@@ -33,15 +33,77 @@ body {
 }
 
 .transaction-bottom-menu {
-    display: flex;
-    width: 100%;
-    height: auto;
+    display: inline-flex; 
+    justify-content: flex-start;
+   height: auto;
+    font-size: 13.5px; 
+    font-weight: 500;   
+    padding: 0px !important;
+    margin-top: 3px;
 }
-
 .transaction-bottom-menu div {
-    width: 12%;
-    height: 43px;
-    padding-top: 13px;
+    width: 27%;
     text-align: center;
-    flex-direction: row;
+    padding: 11px 0px;
+}
+.transaction-bottom-menu div:hover {
+    cursor: pointer;
+ }
+
+.transaction-bottom-menu-two div:hover {
+    cursor: pointer;
+ }
+.transaction-bottom-menu-two {
+    display: inline-flex; 
+    justify-content: flex-end;
+    height: auto;
+    margin-top: 3px;
+    font-size: 13.5px;
+    font-weight: 500;
+    position: relative;
+    padding: 0px !important;
+}
+.transaction-bottom-menu-two div {
+    width: 40%;
+    text-align: center;
+    padding: 11px 0px;
+}
+.transaction-bottom-menu-two ul {
+    width: 40%;
+   left: 68%;
+    position: absolute;
+    z-index: 99999999;
+    top: 18px;
+    padding: 5px !important;
+    background-color: #342e49;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.transaction-bottom-menu-two ul li{
+    list-style-type: none;
+    padding: 7px;
+    color: #fcfcfc;
+}
+.transaction-bottom-menu-active {
+    border-bottom: 1.5px solid #0078ff;
+    color: #fcfcfc;
+}
+.transaction-bottom{
+    height: auto;
+    padding: 5px;
+    
+
+}
+.transaction-bottom .bottom-warning {
+    width: 50%;
+    height: auto;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 14px;
+    
+}
+.transaction-bottom .bottom-warning img{
+    width: 75px;
+    height: auto;
+    margin-bottom: 15px;
 }
