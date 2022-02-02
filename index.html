@@ -20,12 +20,12 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding: 0px !important;">
         <div class="row">
-            <div class="col-md-2 ">
+            <div class="col-md-2" style="padding: 0px 3px;">
             sol kısım
             </div>
-            <div class="col-md-8 ">
+            <div class="col-md-7">
                 <div class="row">
                 <div class="col-md-12 tradingview-widget-container">
                     <div class="row" style="height: 500px;">
@@ -58,7 +58,7 @@
                 </div>
                 
                 <div class="col-md-4 transaction-bottom-menu-two bg-bright font-dark">
-                    <div>Emir Tİpi <i class="fas fa-angle-down"></i> </div>      
+                    <div>Emir Tİpi <i class="fas fa-angle-down" style="display: none;"></i> <i class="fas fa-angle-up"></i></div>      
                     <ul>
                         <li>Tüm emirler</li>
                         <li>Satış emirler</li>
@@ -89,17 +89,46 @@
             </div>
           
             </div>
-            <div class="col-md-2">
-                sağ kısım
-            </div>
+            <div class="col-md-3" style="padding: 0px 3px;">
+               <div class="right-order bg-bright">
+                  <div class="transaction-bottom-menu-active">Limit</div>
+                  <div>Market</div>
+                  <div>Stop</div>
+                  <div><i class="fas fa-angle-down" style="font-size: 20px;"></i></div>             
+               </div>
+               <div class="limit-order-content bg-dark">
+                <div class="content-one font-bright">
+                 <span><i class="fas fa-align-left font-dark" style="margin-right: 5px;"></i> Kullanılabilir</span>
+                 <span>0 <i class="font-dark" style="margin-left: 1px;"> USDT</i></span>
+                </div>
+                
+                <div class="content-button">
+                    <button>Al</button>
+                    <button>Sat</button>
+                </div>
+                <div class="content-price">
+                    <span style="position: absolute; top: 8px; font-size: 11px;">Price</span> <br>
+                    <input type="text" name="" id="" value="0">
+                    <span>USDT</span>
+                </div>
+                <div class="content-price">
+                    <span style="position: absolute; top: 8px; font-size: 11px;">Amount</span> <br>
+                    <input type="text" name="" id="" value="0">
+                    <span>BTC</span>
+                </div>
+                <div class="content-rate">
+                    <div> 25%</div>
+                    <div> 50%</div>
+                    <div> 75%</div>
+                    <div> 100%</div>
+                </div>
+               </div>
+            </div>    
         </div>
     </div>
 </body>
 
 <script type="text/javascript" src="js/script.js"></script>
-
-
-
 
 </html>
 
