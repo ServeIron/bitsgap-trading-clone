@@ -23,107 +23,148 @@
     <div class="container-fluid" style="padding: 0px !important;">
         <div class="row">
             <div class="col-md-2" style="padding: 0px 3px;">
-            sol kısım
+                sol kısım
             </div>
             <div class="col-md-7">
                 <div class="row">
-                <div class="col-md-12 tradingview-widget-container">
-                    <div class="row" style="height: 500px;">
-                        <script>
-                            new TradingView.widget({
-                                "autosize": true,
-                                "symbol": "BINANCE:BTCUSD",
-                                "timezone": "Europe/Istanbul",
-                                "theme": "Dark",
-                                "style": "1",
-                                "locale": "en",
-                                "toolbar_bg": "#231f30",
-                                "enable_publishing": true,
-                                "withdateranges": true,
-                                "range": "ytd",
-                                "allow_symbol_change": true,
-                                "details": false,
-                                "hotlist": false,
-                                "container_id": "tradingview_e3174"
-                            });
-                        </script>
+                    <div class="col-md-12 tradingview-widget-container">
+                        <div class="row" style="height: 500px;">
+                            <script>
+                                new TradingView.widget({
+                                    "autosize": true,
+                                    "symbol": "BINANCE:BTCUSD",
+                                    "timezone": "Europe/Istanbul",
+                                    "theme": "Dark",
+                                    "style": "1",
+                                    "locale": "en",
+                                    "toolbar_bg": "#231f30",
+                                    "enable_publishing": true,
+                                    "withdateranges": true,
+                                    "range": "ytd",
+                                    "allow_symbol_change": true,
+                                    "details": false,
+                                    "hotlist": false,
+                                    "container_id": "tradingview_e3174"
+                                });
+                            </script>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 transaction-bottom-menu bg-bright font-dark">
+                        <div class="transaction-bottom-menu-active">Açık Emirler</div>
+                        <div>Pozisyonlar</div>
+                        <div>Emir geçmişi</div>
+
+                    </div>
+
+                    <div class="col-md-4 transaction-bottom-menu-two bg-bright font-dark">
+                        <div>Emir Tİpi <i class="fas fa-angle-down" style="display: none;"></i> <i class="fas fa-angle-up"></i></div>
+                        <ul>
+                            <li>Tüm emirler</li>
+                            <li>Satış emirler</li>
+                            <li>Alım emirler</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: block;">
+                        <div class="bottom-warning font-dark">
+                            <img src="images/box.png" alt="">
+                            <br> Açık Emirleriniz Bulunmuyor
+                        </div>
+                    </div>
+                    <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: none;">
+                        <div class="bottom-warning font-dark">
+                            <img src="images/box.png" alt="">
+                            <br> Pozisyon Bulunmuyor
+                        </div>
+                    </div>
+                    <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: none;">
+                        <div class="bottom-warning font-dark">
+                            <img src="images/box.png" alt="">
+                            <br> Emirleriniz Bulunmuyor
+                        </div>
                     </div>
                 </div>
-              
-                <div class="col-md-8 transaction-bottom-menu bg-bright font-dark">
-                    <div class="transaction-bottom-menu-active">Açık Emirler</div>
-                    <div>Pozisyonlar</div>
-                    <div>Emir geçmişi</div>
-                   
-                </div>
-                
-                <div class="col-md-4 transaction-bottom-menu-two bg-bright font-dark">
-                    <div>Emir Tİpi <i class="fas fa-angle-down" style="display: none;"></i> <i class="fas fa-angle-up"></i></div>      
-                    <ul>
-                        <li>Tüm emirler</li>
-                        <li>Satış emirler</li>
-                        <li>Alım emirler</li>
-                    </ul>            
-                </div>
-                <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: block;">
-                    <div class="bottom-warning font-dark">
-                    <img src="images/box.png" alt="">
-                    <br>
-                        Açık Emirleriniz Bulunmuyor
-                    </div>
-                </div>
-                <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: none;">
-                    <div class="bottom-warning font-dark">
-                    <img src="images/box.png" alt="">
-                    <br>
-                        Pozisyon Bulunmuyor
-                    </div>
-                </div>
-                <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: none;">
-                    <div class="bottom-warning font-dark">
-                    <img src="images/box.png" alt="">
-                    <br>
-                        Emirleriniz Bulunmuyor
-                    </div>
-                </div>
-            </div>
-          
+
             </div>
             <div class="col-md-3" style="padding: 0px 3px;">
-               <div class="right-order bg-bright">
-                  <div class="transaction-bottom-menu-active">Limit</div>
-                  <div>Market</div>
-                  <div>Stop</div>
-                  <div><i class="fas fa-angle-down" style="font-size: 20px;"></i></div>             
-               </div>
-               <div class="limit-order-content bg-dark">
-                <div class="content-one font-bright">
-                 <span><i class="fas fa-align-left font-dark" style="margin-right: 5px;"></i> Kullanılabilir</span>
-                 <span>0 <i class="font-dark" style="margin-left: 1px;"> USDT</i></span>
+                <!-- sağ taraf -->
+                <div class="right-order bg-bright">
+                    <div class="transaction-bottom-menu-active">Limit</div>
+                    <div>Market</div>
+                    <div>Stop</div>
+                    <div><i class="fas fa-angle-down" style="font-size: 20px;"></i></div>
                 </div>
-                
-                <div class="content-button">
-                    <button>Al</button>
-                    <button>Sat</button>
+                <div class="limit-order-content bg-dark">
+                    <div class="content-one font-bright">
+                        <span><i class="fas fa-align-left font-dark" style="margin-right: 5px;"></i> Kullanılabilir</span>
+                        <span>0 <i class="font-dark" style="margin-left: 1px;"> USDT</i></span>
+                    </div>
+
+                    <div class="content-button">
+                        <button>Al</button>
+                        <button>Sat</button>
+                    </div>
+                    <div class="content-price">
+                        <span style="position: absolute; top: 8px; font-size: 11px;">Price</span> <br>
+                        <input type="text" name="" id="" value="0">
+                        <span>USDT</span>
+                    </div>
+                    <div class="content-price">
+                        <span style="position: absolute; top: 8px; font-size: 11px;">Amount</span> <br>
+                        <input type="text" name="" id="" value="0">
+                        <span>BTC</span>
+                    </div>
+                    <div class="content-rate">
+                        <div> 25%</div>
+                        <div> 50%</div>
+                        <div> 75%</div>
+                        <div> 100%</div>
+                    </div>
+                    <div class="content-price">
+                        <span style="position: absolute; top: 8px; font-size: 11px;">Total</span> <br>
+                        <input type="text" name="" id="" value="0">
+                        <span>USDT</span>
+                    </div>
+                    <p class="font-dark" style="text-align: right;">0 USD</p>
+
                 </div>
-                <div class="content-price">
-                    <span style="position: absolute; top: 8px; font-size: 11px;">Price</span> <br>
-                    <input type="text" name="" id="" value="0">
-                    <span>USDT</span>
+                <div class="limit-content bg-dark">
+                    <div class="limit-content-to">
+                        <div>Take profit <i class="fas fa-question-circle font-dark"></i>
+                            <div class="content-to-info">
+                                <strong><i class="fas fa-question-circle font-bright"></i> Take Profit</strong>
+                                <p class="font-bright">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        </div>
+                    </div>
+                    <div class="limit-content-to-detail bg-dark">
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Profit</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Target Price</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>USDT</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Amount to sell</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <br>
+                        <p>Warning message content</p>
+
+                    </div>
                 </div>
-                <div class="content-price">
-                    <span style="position: absolute; top: 8px; font-size: 11px;">Amount</span> <br>
-                    <input type="text" name="" id="" value="0">
-                    <span>BTC</span>
-                </div>
-                <div class="content-rate">
-                    <div> 25%</div>
-                    <div> 50%</div>
-                    <div> 75%</div>
-                    <div> 100%</div>
-                </div>
-               </div>
-            </div>    
+            </div>
         </div>
     </div>
 </body>
