@@ -274,7 +274,14 @@ html {
     flex-direction: column;
     display: flex;
 }
+.limit-content p  {
+    text-align: center;
+    color: #ff4114;
 
+}
+.limit-content  strong {
+    color: #0083ff;
+}
 .limit-content-to {
     display: inline-flex;
     align-items: stretch;
@@ -375,6 +382,7 @@ html {
 }
 
 .limit-content-to-detail {
+    
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -408,4 +416,35 @@ html {
     font-family: sans-serif;
     font-weight: unset;
     text-align: center;
+    margin-left: 10px;
+}
+.detail-balance{
+    width: 100% !important;
+    height: auto;
+    display: flex;
+    align-items: stretch;
+}
+.detail-balance div {
+    width: 50%;
+    height: auto;
+    padding: 5px 9px;
+}
+.detail-balance div:nth-child(2){ 
+    text-align: right;
+    font-size: 15px;
+}
+.balance-content{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    display: flex;
+    border-top: 3px solid #000;
+   
+
+}
+.balance-content div {
+    padding: 10px 7px;
+}
+.border {
+    
 }
