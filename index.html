@@ -51,15 +51,15 @@
                     </div>
 
                     <div class="col-md-8 transaction-bottom-menu bg-bright font-dark">
-                        <div class="transaction-bottom-menu-active">Açık Emirler</div>
-                        <div>Pozisyonlar</div>
-                        <div>Emir geçmişi</div>
+                        <div class="transaction-bottom-menu-active" id="orderTitle">Açık Emirler</div>
+                        <div id="positionTitle">Pozisyonlar</div>
+                        <div id="orderHistoryTitle">Emir geçmişi</div>
 
                     </div>
 
                     <div class="col-md-4 transaction-bottom-menu-two bg-bright font-dark">
-                        <div>Emir Tİpi <i class="fas fa-angle-down" style="display: none;"></i> <i class="fas fa-angle-up"></i></div>
-                        <ul style="display: none;">
+                        <div id="orderType">Emir Tİpi <i class="fas fa-angle-down" id="ordeIcon"></i> <i class="fas fa-angle-up" style="display: none;" id="ordeIconTwo"></i></div>
+                        <ul style="display: none;" id="orderUl">
                             <li>Tüm emirler</li>
                             <li>Satış emirler</li>
                             <li>Alım emirler</li>
@@ -71,13 +71,13 @@
                             <br> Açık Emirleriniz Bulunmuyor
                         </div>
                     </div>
-                    <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: none;">
+                    <div class="col-md-12 transaction-bottom bg-dark" id="transact-posisition" style="display: none;">
                         <div class="bottom-warning font-dark">
                             <img src="images/box.png" alt="">
                             <br> Pozisyon Bulunmuyor
                         </div>
                     </div>
-                    <div class="col-md-12 transaction-bottom bg-dark" id="transact-opened" style="display: none;">
+                    <div class="col-md-12 transaction-bottom bg-dark" id="transact-ordered" style="display: none;">
                         <div class="bottom-warning font-dark">
                             <img src="images/box.png" alt="">
                             <br> Emirleriniz Bulunmuyor
