@@ -132,13 +132,16 @@ html {
     padding: 0px !important;
 }
 
+
 .right-order div {
     width: 25%;
     padding: 9px;
     color: #95939e;
     text-align: center;
 }
-
+.right-order:hover{
+    cursor: pointer;
+}
 .right-order div:nth-child(4) {
     border-left: 0.1px solid #4f4e56;
     padding: 11px auto 4px auto;
@@ -205,18 +208,28 @@ html {
     cursor: pointer;
 }
 
-.content-button button:nth-child(2):focus {
-    background-color: #f44336;
-    color: #fff;
+
+.content-buton-two-active{
+    background-color: #f44336 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+.content-buton-one-active{
+    background-color: #4caf50 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+.content-one-middle-button{
+    background-color: #2c273d;
+    color: #4caf50 !important;
     cursor: pointer;
 }
 
-.content-button button:nth-child(1):focus {
-    background-color: #4caf50;
-    color: #fff;
+.content-two-middle-button{
+    background-color: #2c273d !important;
+    color: #4caf50 !important;
     cursor: pointer;
 }
-
 .content-price {
     display: flex;
     width: 100%;
@@ -450,6 +463,67 @@ html {
 .balance-content div {
     padding: 10px 7px;
 }
-.border {
-    
+.right-info{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    z-index: 9999999;
+    height: auto;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.right-info .fa-times-circle {
+    color: #a1a1a1;
+    font-size: 17px;
+    position: absolute;
+    left: -5px;
+    top: -5px;
+ 
+}
+.right-info div {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    align-items: stretch;
+}
+.right-info div div{
+    text-align: left;
+    padding: 10px 5px;
+    color: #8a8a8b;
+    border-bottom: 0.1px solid #8a8a8b;
+}
+.right-info div div:nth-child(1){
+   
+    width: 15%;
+}
+.right-info div div:nth-child(2){
+     display: inline-block !important;
+   
+}
+.right-info div div strong{
+    color: #fcfcfc;
+    margin-bottom: 3px;
+}
+.right-info div div:nth-child(1) i{
+    font-size: 30px;
+    margin-left: 3px;
+}
+.right-info .fa-times-circle:hover{
+    cursor: pointer;
+}
+.main-info{
+    width: 100%;
+    font-family: sans-serif;
+    color: #fff;
+    border-bottom: 0.3px solid #8a8a8b;
+    margin-bottom: 10px;
+    background-color: #161617;
+    padding: 10px 10px;
+}
+.main-info i {
+    color: #d2c12a;
+    font-size: 17px;
+}
+.main-info a {
+    color: #0675f0;
 }

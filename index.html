@@ -21,6 +21,10 @@
 
 <body>
     <div class="container-fluid" style="padding: 0px !important;">
+        <div class="main-info">
+            <i class="fas fa-exclamation-triangle"></i> You don't have any connected exchanges, <a href=""> please connect to Example</a>
+        </div>
+    
         <div class="row">
             <div class="col-md-2" style="padding: 0px 3px;">
                 sol kısım
@@ -86,23 +90,90 @@
                 </div>
 
             </div>
-            <div class="col-md-3 " style="padding: 0px 3px;">
+            <div class="col-md-3" style="padding: 0px 3px; position: relative;">
                 <!-- sağ taraf -->
-                <div class="right-order bg-bright">
-                    <div class="transaction-bottom-menu-active">Limit</div>
-                    <div>Market</div>
-                    <div>Stop</div>
-                    <div><i class="fas fa-angle-down" style="font-size: 20px;"></i></div>
+                <div class="right-info bg-dark" id="right_info_content" style="display: none;">
+                    <i class="fas fa-times-circle" id="right_info_close"></i>
+                    <div>
+                        <div><i class="fab fa-first-order-alt"></i></div>
+                        <div style="float: left;">
+                            <strong> Example Title</strong>
+                            
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eum nesciunt tenetur, ad quas totam nihil
+                        </div>
+                    </div>
+                    <div>
+                        <div><i class="fab fa-first-order-alt"></i></div>
+                        <div style="float: left;">
+                            <strong> Example Title</strong>
+                            
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eum nesciunt tenetur, ad quas totam nihil
+                        </div>
+                    </div>
+                    <div>
+                        <div><i class="fab fa-first-order-alt"></i></div>
+                        <div style="float: left;">
+                            <strong> Example Title</strong>
+                            
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eum nesciunt tenetur, ad quas totam nihil
+                        </div>
+                    </div>
+                    <div>
+                        <div><i class="fab fa-first-order-alt"></i></div>
+                        <div style="float: left;">
+                            <strong> Example Title</strong>
+                            
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eum nesciunt tenetur, ad quas totam nihil
+                        </div>
+                    </div>
+                    <div>
+                        <div><i class="fab fa-first-order-alt"></i></div>
+                        <div style="float: left;">
+                            <strong> Example Title</strong>
+                            
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eum nesciunt tenetur, ad quas totam nihil
+                        </div>
+                    </div>
+                    <div>
+                        <div><i class="fab fa-first-order-alt"></i></div>
+                        <div style="float: left;">
+                            <strong> Example Title</strong>
+                            
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eum nesciunt tenetur, ad quas totam nihil
+                        </div>
+                    </div>
+                    <div>
+                        <div><i class="fab fa-first-order-alt"></i></div>
+                        <div style="float: left;">
+                            <strong> Example Title</strong>
+                            
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti provident eum nesciunt tenetur, ad quas totam nihil
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="limit-order-content bg-dark">
+                <div class="right-order bg-bright">
+                    <div class="transaction-bottom-menu-active" id="order-limit">Limit</div>
+                    <div id="order-market">Market</div>
+                    <div id="order-stop">Stop</div>
+                    <div id="right_info_open"><i class="fas fa-angle-down" style="font-size: 20px;" ></i></div>
+                </div>
+                <div class="limit-order-content bg-dark" id="order-limit-box">
                     <div class="content-one font-bright">
                         <span><i class="fas fa-align-left font-dark" style="margin-right: 5px;"></i> Kullanılabilir</span>
                         <span>0 <i class="font-dark" style="margin-left: 1px;"> USDT</i></span>
                     </div>
 
                     <div class="content-button">
-                        <button>Al</button>
-                        <button>Sat</button>
+                        <button id="limit_buy">Al</button>
+                        <button id="limit_sell">Sat</button>
                     </div>
                     <div class="content-price">
                         <span style="position: absolute; top: 8px; font-size: 11px;">Price</span> <br>
@@ -128,7 +199,7 @@
                     <p class="font-dark" style="text-align: right;">0 USD</p>
 
                 </div>
-                <div class="limit-content bg-dark">
+                <div class="limit-content bg-dark" id="order-limit-profit">
 
                     <div class="limit-content-to">
                         <div>Take profit <i class="fas fa-question-circle font-dark"></i>
@@ -139,6 +210,158 @@
                         </div>
                         <div>
                             <label class="switch">
+                            <input type="checkbox" id="profit_title">
+                            <span class="slider round"></span>
+                        </label>
+                        </div>
+                    </div>
+
+                    <div class="limit-content-to-detail bg-dark" style="display: none;"  id="profit_content">
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Profit</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Target Price</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>USDT</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Amount to sell</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <br>
+                        <p>Warning message content</p>
+                        <br>
+                        <div class="detail-balance">
+                            <div class="font-dark">Project Profit</div>
+                            <div class="font-dark"> <strong class="font-bright">  0</strong> USDT</div>
+                        </div>
+                    </div>
+
+                    <div class="limit-content-to">
+                        <div>Stop Loss <i class="fas fa-question-circle font-dark"></i>
+                            <div class="content-to-info">
+                                <strong><i class="fas fa-question-circle font-bright"></i> Take Profit</strong>
+                                <p class="font-bright">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="switch">
+                            <input type="checkbox" id="stoplos_title">
+                            <span class="slider round"></span>
+                        </label>
+                        </div>
+                    </div>
+
+                    <div class="limit-content-to-detail bg-dark" id="stoplos_content" style="display: none;">
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Profit</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Target Price</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>USDT</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Amount to sell</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <br>
+                        <p>Warning message content</p>
+                        <br>
+                        <div class="detail-balance">
+                            <div class="font-dark">Project Profit</div>
+                            <div class="font-dark"> <strong class="font-bright">  0</strong> USDT</div>
+                        </div>
+                    </div>
+
+                    <div class="limit-content-to">
+                        <div>Trailing Take Profit <i class="fas fa-question-circle font-dark"></i>
+                            <div class="content-to-info">
+                                <strong><i class="fas fa-question-circle font-bright"></i> Take Profit</strong>
+                                <p class="font-bright">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="switch">
+                            <input type="checkbox" id="tariligntake_title">
+                            <span class="slider round"></span>
+                        </label>
+                        </div>
+                    </div>
+
+                    <div class="limit-content-to-detail bg-dark" id="tariligntake_content" style="display: none;">
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Profit</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Target Price</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>USDT</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Amount to sell</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <br>
+                        <p>Warning message content</p>
+                        <br>
+                        <div class="detail-balance">
+                            <div class="font-dark">Project Profit</div>
+                            <div class="font-dark"> <strong class="font-bright">  0</strong> USDT</div>
+                        </div>
+                    </div>
+                    <p>Please  <strong>connect Binance</strong>  to trade </p>
+                </div>
+
+                <!-- limit box  bitiyor -->
+
+                <div class="limit-order-content bg-dark" id="market-limit-box" style="display: none;">
+                    <div class="content-one font-bright">
+                        <span><i class="fas fa-align-left font-dark" style="margin-right: 5px;"></i> Kullanılabilir</span>
+                        <span>0 <i class="font-dark" style="margin-left: 1px;"> USDT</i></span>
+                    </div>
+
+                    <div class="content-button">
+                        <button>Al</button>
+                        <button>Sat</button>
+                    </div>
+                   
+                    <div class="content-price">
+                        <span style="position: absolute; top: 8px; font-size: 11px;">Amount</span> <br>
+                        <input type="text" name="" id="" value="0">
+                        <span>BTC</span>
+                    </div>
+                    <div class="content-rate">
+                        <div> 25%</div>
+                        <div> 50%</div>
+                        <div> 75%</div>
+                        <div> 100%</div>
+                    </div>
+                  
+                    <p class="font-dark" style="text-align: right;">0 USD</p>
+
+                </div>
+                <div class="limit-content bg-dark" id="market-limit-profit" style="display: none;">
+
+                    <div class="limit-content-to">
+                        <div>Take profit <i class="fas fa-question-circle font-dark"></i>
+                            <div class="content-to-info">
+                                <strong><i class="fas fa-question-circle font-bright"></i> Take Profit</strong>
+                                <p class="font-bright">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="switch" id="">
                             <input type="checkbox">
                             <span class="slider round"></span>
                         </label>
@@ -251,6 +474,130 @@
                     </div>
                     <p>Please  <strong>connect Binance</strong>  to trade </p>
                 </div>
+
+                <!-- markett stop bitiyor -->
+
+                <div class="limit-order-content bg-dark" id="stop-limit-box" style="display: none;">
+                    <div class="content-one font-bright">
+                        <span><i class="fas fa-align-left font-dark" style="margin-right: 5px;"></i> Kullanılabilir</span>
+                        <span>0 <i class="font-dark" style="margin-left: 1px;"> USDT</i></span>
+                    </div>
+
+                    <div class="content-button">
+                        <button>Al</button>
+                        <button>Sat</button>
+                    </div>
+                    <div class="content-price">
+                        <span style="position: absolute; top: 8px; font-size: 11px;">Price</span> <br>
+                        <input type="text" name="" id="" value="0">
+                        <span>USDT</span>
+                    </div>
+                    <div class="content-price">
+                        <span style="position: absolute; top: 8px; font-size: 11px;">Amount</span> <br>
+                        <input type="text" name="" id="" value="0">
+                        <span>BTC</span>
+                    </div>
+                    <div class="content-rate">
+                        <div> 25%</div>
+                        <div> 50%</div>
+                        <div> 75%</div>
+                        <div> 100%</div>
+                    </div>
+                    <div class="content-price">
+                        <span style="position: absolute; top: 8px; font-size: 11px;">Total</span> <br>
+                        <input type="text" name="" id="" value="0">
+                        <span>USDT</span>
+                    </div>
+                    <p class="font-dark" style="text-align: right;">0 USD</p>
+
+                </div>
+                <div class="limit-content bg-dark" id="stop-limit-profit" style="display: none;">
+
+        
+       
+
+                    <div class="limit-content-to">
+                        <div>Stop Loss <i class="fas fa-question-circle font-dark"></i>
+                            <div class="content-to-info">
+                                <strong><i class="fas fa-question-circle font-bright"></i> Take Profit</strong>
+                                <p class="font-bright">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        </div>
+                    </div>
+
+                    <div class="limit-content-to-detail bg-dark" style="display: none;">
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Profit</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Target Price</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>USDT</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Amount to sell</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <br>
+                        <p>Warning message content</p>
+                        <br>
+                        <div class="detail-balance">
+                            <div class="font-dark">Project Profit</div>
+                            <div class="font-dark"> <strong class="font-bright">  0</strong> USDT</div>
+                        </div>
+                    </div>
+
+                        <div class="limit-content-to">
+                            <div>Trailing Take Profit <i class="fas fa-question-circle font-dark"></i>
+                                <div class="content-to-info">
+                                    <strong><i class="fas fa-question-circle font-bright"></i> Take Profit</strong>
+                                    <p class="font-bright">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                            </div>
+                        </div>
+
+                    <div class="limit-content-to-detail bg-dark" style="display: none;">
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Profit</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Target Price</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>USDT</span>
+                        </div>
+                        <div class="content-price">
+                            <span style="position: absolute; top: 8px; font-size: 11px;">Amount to sell</span> <br>
+                            <input type="text" name="" id="" value="0">
+                            <span>%</span>
+                        </div>
+                        <br>
+                        <p>Warning message content</p>
+                        <br>
+                        <div class="detail-balance">
+                            <div class="font-dark">Project Profit</div>
+                            <div class="font-dark"> <strong class="font-bright">  0</strong> USDT</div>
+                        </div>
+                    </div>
+                    <p>Please  <strong>connect Binance</strong>  to trade </p>
+                </div>
+                <!--- stop bitiyor -->
                 <div class="balance-content bg-dark">
                     <div class="bg-bright font-bright">Balance</div>
                     <div class="bottom-warning font-dark" style="margin-left: 8%; text-align: center;">
