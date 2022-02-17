@@ -586,6 +586,10 @@ html {
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
+   
+}
+.order-book-list-in:nth-of-type(odd){
+    background-color: #231f30;
 }
 .order-book-list-in div{
     width: 33%;
@@ -594,12 +598,15 @@ html {
 }
 .order-book-list-in div:nth-child(2){
     text-align: center;
+    font-size: 11px;
 }
 .order-book-list-in div:nth-child(3){
     text-align: right;
+    font-size: 11px;
 }
 .order-book-list-in div:nth-child(1){
     font-weight: 600;
+    font-size: 12px;
 }
 .order-dark-bg{
     background-color: #231f30;
@@ -612,24 +619,85 @@ html {
     color: #4caf50; 
 }
 
-.orders-books-lists div {
-    width: 25% !important;
 
+.order-book-first{
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column;
 }
-.orders-books-lists div:nth-child(1){
+.order-book-last{
+    width: 50%;
+    display: inline-flex;
+    flex-direction: column;
+}
+.order-book{
+    flex-direction: row !important;
+}
+.order-book-first div{
+  width: 100%;
+  flex-direction: row;
+  display: inline-flex;
+  color: #ffffffbf;
+  padding: 2px 3px;
+}
+.order-book-last div{
+    width: 100%;
+    flex-direction: row;
+    display: inline-flex;
+    color: #ffffffbf;
+    padding: 2px 3px;
+  }
+
+  .order-book-first div div:nth-child(1){
     font-weight: normal !important;
-  
+  text-align: left;
 }
-.orders-books-lists div:nth-child(2){
+.order-book-first div div:nth-child(2){
     font-weight: 600;
     color: #4caf50; 
     text-align: right !important;
+    flex-direction: column-reverse;
 }
-.orders-books-lists div:nth-child(3){
+.order-book-last div div:nth-child(1){
     text-align: left !important;
     font-weight: 600;
     color: #f84015; 
 }
-.orders-books-lists div:nth-child(4){
+.order-book-last div div:nth-child(2){
+    flex-direction: column-reverse;
     text-align: right;
+}
+.order-book-first div div{
+    width: 50%;
+}
+.order-book-last div div{
+  width: 50%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;  
+  }
+  
+  /* Track */
+::-webkit-scrollbar-track {
+  background-color: #231f30;
+
+  }
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0078ff; 
+ 
+  }
+
+  .visible-order{
+   height: 600px;
+   z-index: 9999;
+  }
+  .unvisible-order{
+    display: none;
+  }
+  .visib-order{
+    height: 200px;
 }
