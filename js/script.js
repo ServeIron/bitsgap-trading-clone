@@ -1,3 +1,11 @@
+
+function takeSearch(){
+  var search = document.querySelector(".search-Hsmn_0WX");
+
+  console.log(search);
+}
+setInterval(function () {takeSearch()}, 1000);
+
 // orta kısım
 var orderTitle = document.getElementById("orderTitle");
 var positionTitle = document.getElementById("positionTitle");
